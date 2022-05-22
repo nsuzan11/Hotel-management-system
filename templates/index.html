@@ -1,9 +1,732 @@
-<!DOCTYPE html>
-<html>
-<body>
+{% extends "base.html" %}
+{% block content %}
+<div id="fb-root"></div>
+<script>
+    window.fbAsyncInit = function () {
+        FB.init({
+            xfbml: true,
+            version: 'v5.0'
+        });
+    };
 
-<h1>Hello World!</h1>
-<p>Welcome to my first Django project!</p>
+    (function (d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) return;
+        js = d.createElement(s);
+        js.id = id;
+        js.src = 'https://connect.facebook.net/en_US/sdk/xfbml.customerchat.js';
+        fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));
+</script>
 
-</body>
-</html>
+<div class="fb-customerchat"
+     attribution=setup_tool
+     page_id="109670120512344"
+     theme_color="#8f5541">
+</div>
+
+
+
+<section class="main_slider_area">
+    <div class="home-carousel owl-carousel owl-theme"><div class="item"><img class="img-responsive" src="https://hotelhimalaya.com.np/images/slideshow/bdjwC-reception.jpg" alt="slideshow"/></div><div class="item"><img class="img-responsive" src="https://hotelhimalaya.com.np/images/slideshow/d60uH-1.jpg" alt="slideshow"/></div><div class="item"><img class="img-responsive" src="https://hotelhimalaya.com.np/images/slideshow/nD8VO-3.jpg" alt="slideshow"/></div><div class="item"><img class="img-responsive" src="https://hotelhimalaya.com.np/images/slideshow/vgykt-garden.jpg" alt="slideshow"/></div><div class="item"><img class="img-responsive" src="https://hotelhimalaya.com.np/images/slideshow/Cx1yR-ext.jpg" alt="slideshow"/><div class="wrapper">
+                            <div class="item-inner text-center">
+                                Best Memories Start Here
+                            </div>
+                        </div></div><div class="item"><img class="img-responsive" src="https://hotelhimalaya.com.np/images/slideshow/rxguD-edited-hh.jpg" alt="slideshow"/><div class="wrapper">
+                            <div class="item-inner text-center">
+                                Palm Garden
+                            </div>
+                        </div></div><div class="item"><img class="img-responsive" src="https://hotelhimalaya.com.np/images/slideshow/gUK5n-hotelhimalaya.jpg" alt="slideshow"/></div><div class="item"><img class="img-responsive" src="https://hotelhimalaya.com.np/images/slideshow/XntQO-room.jpg" alt="slideshow"/><div class="wrapper">
+                            <div class="item-inner text-center">
+                                Experience the Passion of Hospitality
+                            </div>
+                        </div></div></div>
+</section>
+<!--================End Slider Area =================-->
+
+<!--================Introduction Area =================-->
+<section class="resot-activities clearfix nasir-style">
+    <div class="container clearfix common-pad">
+        <div class="row">
+            <div class="col-md-6 activities-cont">
+                <div class="sec-header3">
+                    <h2>Welcome to <span>Hotel Natural Village</span></h2>
+                </div>
+                <p style="text-align: justify;">
+	Nestled within 10 acres of exquisitely landscaped grounds, Hotel Natural Village is conveniently located 8 km away from the Tribhuban International Airport and only 2 km from the Kathmandu city centre. 
+  We have always been an ideal haven for business and leisure travelers alike, offering resort ambience with an intimate touch. Since many of the distinguished 
+  NGO&rsquo;s and INGO&rsquo;s in Kathmandu are in the vicinity and the UN head office is only a few minutes walking distance.</p>
+<p style="text-align: justify;">
+	We provide a perfect place for our valued guests to rest, work or socialize. Come and stay with us and allow us to make you feel at home with true Nepalese hospitality!</p>
+<div class="blog-btn">
+                    <a href="links/aboutus.html" style="font-size:30px ; color:lightbrown">Read More <i class="fa fa-angle-right"></i></a>
+                </div>
+
+            </div>
+            <div class="col-md-6">
+              
+                <div class="embed-responsive embed-responsive-16by9">
+                  <video width="" height="" controls autoplay="">
+                    <source src="pictures/video.mp4" type="video/mp4">
+                  
+                  </video> 
+                    <!-- <video source src="pictures/video.mp4" type="video/mp4" autoplay="">
+                    </video> -->
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!--================End Introduction Area =================-->
+
+
+<!--================Explor Room Area =================-->
+<section class="explor_room_area">
+    <div class="container">
+        <div class="explor_title row m0">
+            <div class="pull-left">
+                <div class="left_ex_title">
+                    <h2>Accommodation</h2>
+                </div>
+            </div>
+        </div>
+        <div class="row"><div class="col-md-3 col-sm-6 col-xs-12">
+			                        <div class="room-suite room-suite-htwo">
+			                        <div class="item">
+			                        	<div class="ro-img"><img src="https://hotelhimalaya.com.np/images/subpackage/display/meU0H-king.jpg" alt="Deluxe King Bed" class="img-responsive"></div>
+			                        	<div class="ro-txt">
+			                        		 <a href="https://hotelhimalaya.com.np/deluxe-king-bed"><h2>Deluxe King Bed</h2></a>
+			                        		 <p>A well-equipped room with all the facilities needs for an elegant stay.</p>
+			                        		 <div class="ro-text-two">
+			                        		 	 <div class="left-p-two pull-left">
+			                        		 	  <div class="blog-btn">
+                                                    <a href="https://hotelhimalaya.com.np/deluxe-king-bed" class="blog-btn-one">Details<i class="fa fa-arrow-right"></i></a>
+                                                 </div>
+			                        		 	</div>
+			                        		 	
+			                        		 </div>
+			                        	</div>
+			                        </div>
+			                    </div>
+			                 </div><div class="col-md-3 col-sm-6 col-xs-12">
+			                        <div class="room-suite room-suite-htwo">
+			                        <div class="item">
+			                        	<div class="ro-img"><img src="https://hotelhimalaya.com.np/images/subpackage/display/sVGlZ-twin.jpg" alt="Deluxe Twin Bed" class="img-responsive"></div>
+			                        	<div class="ro-txt">
+			                        		 <a href="https://hotelhimalaya.com.np/deluxe-twin-bed"><h2>Deluxe Twin Bed</h2></a>
+			                        		 <p>Twin beds and has everything you need for a pleasant stay.</p>
+			                        		 <div class="ro-text-two">
+			                        		 	 <div class="left-p-two pull-left">
+			                        		 	  <div class="blog-btn">
+                                                    <a href="https://hotelhimalaya.com.np/deluxe-twin-bed" class="blog-btn-one">Details<i class="fa fa-arrow-right"></i></a>
+                                                 </div>
+			                        		 	</div>
+			                        		 	
+			                        		 </div>
+			                        	</div>
+			                        </div>
+			                    </div>
+			                 </div><div class="col-md-3 col-sm-6 col-xs-12">
+			                        <div class="room-suite room-suite-htwo">
+			                        <div class="item">
+			                        	<div class="ro-img"><img src="https://hotelhimalaya.com.np/images/subpackage/display/K6CZW-dlx.jpg" alt="Executive King Bed" class="img-responsive"></div>
+			                        	<div class="ro-txt">
+			                        		 <a href="https://hotelhimalaya.com.np/executive-king-bed"><h2>Executive King Bed</h2></a>
+			                        		 <p>Executive Floor commands the best view of the Kathmandu valley. </p>
+			                        		 <div class="ro-text-two">
+			                        		 	 <div class="left-p-two pull-left">
+			                        		 	  <div class="blog-btn">
+                                                    <a href="https://hotelhimalaya.com.np/executive-king-bed" class="blog-btn-one">Details<i class="fa fa-arrow-right"></i></a>
+                                                 </div>
+			                        		 	</div>
+			                        		 	
+			                        		 </div>
+			                        	</div>
+			                        </div>
+			                    </div>
+			                 </div><div class="col-md-3 col-sm-6 col-xs-12">
+			                        <div class="room-suite room-suite-htwo">
+			                        <div class="item">
+			                        	<div class="ro-img"><img src="https://hotelhimalaya.com.np/images/subpackage/display/BEfrN-jr-suite.jpg" alt="Junior Suite" class="img-responsive"></div>
+			                        	<div class="ro-txt">
+			                        		 <a href="https://hotelhimalaya.com.np/junior-suite"><h2>Junior Suite</h2></a>
+			                        		 <p>spacious room, boast of plush beds with sufficient working space.</p>
+			                        		 <div class="ro-text-two">
+			                        		 	 <div class="left-p-two pull-left">
+			                        		 	  <div class="blog-btn">
+                                                    <a href="https://hotelhimalaya.com.np/junior-suite" class="blog-btn-one">Details<i class="fa fa-arrow-right"></i></a>
+                                                 </div>
+			                        		 	</div>
+			                        		 	 <!--<div class="right-p-two pull-right">
+                                    				<p>$ 180<span>Per Night</span></p>
+                                				</div>-->
+			                        		 </div>
+			                        	</div>
+			                        </div>
+			                    </div>
+			                 </div></div>
+    </div>
+</section>
+<!--================End Explor Room Area =================-->
+
+<!-- ===============service area ===========================================-->
+ <div class="service-area owl-carousel">
+            <div class="fluid-know-area">
+              <div class="work-image-ser">
+                <img src="https://hotelhimalaya.com.np/images/subpackage/image/yt0Ii-boardroom.jpg" alt="Meeting and Events" class="img-responsive">
+              </div>
+              <div class="service-promo">
+                <div class="promo-content">
+                  <div class="know-top">
+                    <a href="conference"><h2>Meeting and Events</h2></a>
+                    <h3>Fully Furnished Workspace</h3>
+                    <p><p style="text-align: justify;">
+	Our conference and meeting halls have seen and hosted many international conventions, workshops and special banquets. Our clienteles include many NGO&rsquo;s and INGO&rsquo;s like the UN, corporate houses and prominent families seeking special venue / menu for their celebration. Whether a corporate conference, convention or a lavish banquet, our team is on hand to help you create a uniquely tailored event to suit your needs</p>
+<!--<a href="https://hotelhimalaya.com.np/business-center"><i class="fa fa-arrow-right"></i></a>--></p>
+                </div>
+                 <ul class="list-inline list-unstyled"><li>
+                                                <div class="feature-block">
+                                                <span> <img src="https://hotelhimalaya.com.np/images/features/zuGiL-podium.png" width="70px" class="center"></span>
+                                                <p>Podium</p>
+								                </div>
+							                </li><li>
+                                                <div class="feature-block">
+                                                <span> <img src="https://hotelhimalaya.com.np/images/features/iSR8d-air-conditioner.png" width="70px" class="center"></span>
+                                                <p>Air Conditioner</p>
+								                </div>
+							                </li><li>
+                                                <div class="feature-block">
+                                                <span> <img src="https://hotelhimalaya.com.np/images/features/03VYl-chalk.png" width="70px" class="center"></span>
+                                                <p>White Board</p>
+								                </div>
+							                </li><li>
+                                                <div class="feature-block">
+                                                <span> <img src="https://hotelhimalaya.com.np/images/features/3GKPW-wireless-router.png" width="70px" class="center"></span>
+                                                <p>High Speed WiFi</p>
+								                </div>
+							                </li><li>
+                                                <div class="feature-block">
+                                                <span> <img src="https://hotelhimalaya.com.np/images/features/DjfYu-projector-(1).png" width="70px" class="center"></span>
+                                                <p>Projector</p>
+								                </div>
+							                </li><li>
+                                                <div class="feature-block">
+                                                <span> <img src="https://hotelhimalaya.com.np/images/features/RlhMb-files-and-folders.png" width="70px" class="center"></span>
+                                                <p>Pen & Pencil</p>
+								                </div>
+							                </li><li>
+                                                <div class="feature-block">
+                                                <span> <img src="https://hotelhimalaya.com.np/images/features/pDWS0-mic.png" width="70px" class="center"></span>
+                                                <p>Mic</p>
+								                </div>
+							                </li><li>
+                                                <div class="feature-block">
+                                                <span> <img src="https://hotelhimalaya.com.np/images/features/RoPP0-water.png" width="70px" class="center"></span>
+                                                <p>Mineral Water</p>
+								                </div>
+							                </li></ul>
+                                </div>
+                            </div>
+                        </div>
+            <div class="fluid-know-area">
+              <div class="work-image-ser">
+                <img src="https://hotelhimalaya.com.np/images/subpackage/image/xxwxd-pool.jpg" alt="Swimming Pool" class="img-responsive">
+              </div>
+              <div class="service-promo">
+                <div class="promo-content">
+                  <div class="know-top">
+                    <h2>Swimming Pool</h2>
+                    <h3>Committed to Better Health</h3>
+                    <p><p style="text-align: justify;">
+	We offer two swimming pools to create comfort zone - one for adults and one for kids, with an adjoining children&rsquo;s play area featuring fun games. It is a great recreational activity for people of all ages. Being fun, swimming is a great way to keep physically and mentally fit.</p>
+<!--<a href="https://hotelhimalaya.com.np/swimming-pool"><i class="fa fa-arrow-right"></i></a>--></p>
+                </div>
+                 <ul class="list-inline list-unstyled"><li>
+                                                <div class="feature-block">
+                                                <span> <img src="https://hotelhimalaya.com.np/images/features/GNri4-water-(1).png" width="70px" class="center"></span>
+                                                <p>Sparkling Blue Water</p>
+								                </div>
+							                </li><li>
+                                                <div class="feature-block">
+                                                <span> <img src="https://hotelhimalaya.com.np/images/features/aJNoP-care.png" width="70px" class="center"></span>
+                                                <p>Safe Environment</p>
+								                </div>
+							                </li><li>
+                                                <div class="feature-block">
+                                                <span> <img src="https://hotelhimalaya.com.np/images/features/RoPP0-water.png" width="70px" class="center"></span>
+                                                <p>Mineral Water</p>
+								                </div>
+							                </li><li>
+                                                <div class="feature-block">
+                                                <span> <img src="https://hotelhimalaya.com.np/images/features/ePh94-beach.png" width="70px" class="center"></span>
+                                                <p>Umbrella</p>
+								                </div>
+							                </li><li>
+                                                <div class="feature-block">
+                                                <span> <img src="https://hotelhimalaya.com.np/images/features/9zak1-bench.png" width="70px" class="center"></span>
+                                                <p>Pool Bench</p>
+								                </div>
+							                </li><li>
+                                                <div class="feature-block">
+                                                <span> <img src="https://hotelhimalaya.com.np/images/features/GoLxa-kid-and-baby.png" width="70px" class="center"></span>
+                                                <p>Fun Games</p>
+								                </div>
+							                </li><li>
+                                                <div class="feature-block">
+                                                <span> <img src="https://hotelhimalaya.com.np/images/features/OPB3Y-towel.png" width="70px" class="center"></span>
+                                                <p>Towel</p>
+								                </div>
+							                </li><li>
+                                                <div class="feature-block">
+                                                <span> <img src="https://hotelhimalaya.com.np/images/features/R8mns-panorama.png" width="70px" class="center"></span>
+                                                <p>View</p>
+								                </div>
+							                </li></ul>
+                                </div>
+                            </div>
+                        </div>
+            <div class="fluid-know-area">
+              <div class="work-image-ser">
+                <img src="https://hotelhimalaya.com.np/images/subpackage/image/Zy0LD-untitled-5.jpg" alt="Health Club & Recreation" class="img-responsive">
+              </div>
+              <div class="service-promo">
+                <div class="promo-content">
+                  <div class="know-top">
+                    <h2>Health Club & Recreation</h2>
+                    <h3>Fully Exercise Equipment</h3>
+                    <p><p style="text-align: justify;">
+	We are proud to present our Health Club featuring a fully-equipped gym, and a separate steam room, sauna and beautiful stone hot plunge pools for women and men. Our guests are welcome to make full use of these modern facilities to get in shape with a work out or nurture your weary body after a hard day&rsquo;s work. The Health Club is available for day visitors and we offer 6 month and yearly packages that include use of the tennis court and swimming pool in combination with the health club.</p>
+<p style="text-align: justify;">
+	<span style="font-size:18px;"><span style="font-size:24px;"><span style="background-color:#2f4f4f;">Notice:</span></span><span style="background-color:#2f4f4f;"> Our Health Club will be </span><span style="font-size:24px;"><span style="background-color:#2f4f4f;">closed</span></span><span style="background-color:#2f4f4f;"> from 11</span><sup><span style="background-color:#2f4f4f;">th</span></sup><span style="background-color:#2f4f4f;"> April, 2021 for approx. 2 months. We are coming up with highly anticipated interior renovations, expansions and upgraded facilities.</span></span></p>
+<!--<a href="https://hotelhimalaya.com.np/health-club-recreation"><i class="fa fa-arrow-right"></i></a>--></p>
+                </div>
+                 <ul class="list-inline list-unstyled"><li>
+                                                <div class="feature-block">
+                                                <span> <img src="https://hotelhimalaya.com.np/images/features/4atNT-weight-lifting.png" width="70px" class="center"></span>
+                                                <p>Gym</p>
+								                </div>
+							                </li><li>
+                                                <div class="feature-block">
+                                                <span> <img src="https://hotelhimalaya.com.np/images/features/xB1pR-spa.png" width="70px" class="center"></span>
+                                                <p>Spa</p>
+								                </div>
+							                </li><li>
+                                                <div class="feature-block">
+                                                <span> <img src="https://hotelhimalaya.com.np/images/features/V8HFf-sauna.png" width="70px" class="center"></span>
+                                                <p>Sauna</p>
+								                </div>
+							                </li><li>
+                                                <div class="feature-block">
+                                                <span> <img src="https://hotelhimalaya.com.np/images/features/19fUU-sauna-(1).png" width="70px" class="center"></span>
+                                                <p>Steam</p>
+								                </div>
+							                </li></ul>
+                                </div>
+                            </div>
+                        </div>
+            <div class="fluid-know-area">
+              <div class="work-image-ser">
+                <img src="https://hotelhimalaya.com.np/images/subpackage/image/5VL7M-untitled-4.jpg" alt="Tennis Court" class="img-responsive">
+              </div>
+              <div class="service-promo">
+                <div class="promo-content">
+                  <div class="know-top">
+                    <h2>Tennis Court</h2>
+                    <h3>Well Maintained Clay Court</h3>
+                    <p><p style="text-align: justify;">
+	Set in the midst of opulent greenery, our well maintained clay court has dedicated tennis professional on hand to ensure any game is a thoroughly enjoyable workout.&nbsp;</p>
+<!--<a href="https://hotelhimalaya.com.np/tennis-court"><i class="fa fa-arrow-right"></i></a>--></p>
+                </div>
+                 <ul class="list-inline list-unstyled"><li>
+                                                <div class="feature-block">
+                                                <span> <img src="https://hotelhimalaya.com.np/images/features/mknL4-racket-(1).png" width="70px" class="center"></span>
+                                                <p>Tennis Equipment</p>
+								                </div>
+							                </li><li>
+                                                <div class="feature-block">
+                                                <span> <img src="https://hotelhimalaya.com.np/images/features/auwgQ-liposuction.png" width="70px" class="center"></span>
+                                                <p>Lowering Body Fat</p>
+								                </div>
+							                </li><li>
+                                                <div class="feature-block">
+                                                <span> <img src="https://hotelhimalaya.com.np/images/features/A7k0k-blood.png" width="70px" class="center"></span>
+                                                <p>Lowering Blood Pressure</p>
+								                </div>
+							                </li><li>
+                                                <div class="feature-block">
+                                                <span> <img src="https://hotelhimalaya.com.np/images/features/o1Esx-heart.png" width="70px" class="center"></span>
+                                                <p>Maintain Heart Rate</p>
+								                </div>
+							                </li><li>
+                                                <div class="feature-block">
+                                                <span> <img src="https://hotelhimalaya.com.np/images/features/hdiI0-plant.png" width="70px" class="center"></span>
+                                                <p>Greenery</p>
+								                </div>
+							                </li><li>
+                                                <div class="feature-block">
+                                                <span> <img src="https://hotelhimalaya.com.np/images/features/tB8hm-coach.png" width="70px" class="center"></span>
+                                                <p>Tennis Professional </p>
+								                </div>
+							                </li><li>
+                                                <div class="feature-block">
+                                                <span> <img src="https://hotelhimalaya.com.np/images/features/BfW5m-sports-and-competition.png" width="70px" class="center"></span>
+                                                <p>Clay Court</p>
+								                </div>
+							                </li><li>
+                                                <div class="feature-block">
+                                                <span> <img src="https://hotelhimalaya.com.np/images/features/RoPP0-water.png" width="70px" class="center"></span>
+                                                <p>Mineral Water</p>
+								                </div>
+							                </li></ul>
+                                </div>
+                            </div>
+                        </div>
+            <div class="fluid-know-area">
+              <div class="work-image-ser">
+                <img src="https://hotelhimalaya.com.np/images/subpackage/image/g4Ay6-garden.jpg" alt="Garden" class="img-responsive">
+              </div>
+              <div class="service-promo">
+                <div class="promo-content">
+                  <div class="know-top">
+                    <h2>Garden</h2>
+                    <h3>Landscaped Grounds</h3>
+                    <p><p style="text-align: justify;">
+	The extensive, landscaped grounds of the Hotel Himalaya are unparalleled in any hotel in the city. The lush, manicured gardens proudly house a beautiful, ancient Kumari Temple and adjacent ornate wood terrace.</p>
+<!--<a href="https://hotelhimalaya.com.np/garden"><i class="fa fa-arrow-right"></i></a>--></p>
+                </div>
+                 <ul class="list-inline list-unstyled"><li>
+                                                <div class="feature-block">
+                                                <span> <img src="https://hotelhimalaya.com.np/images/features/9ipkw-lead.png" width="70px" class="center"></span>
+                                                <p>Happiness</p>
+								                </div>
+							                </li><li>
+                                                <div class="feature-block">
+                                                <span> <img src="https://hotelhimalaya.com.np/images/features/TAp3j-love-and-romance.png" width="70px" class="center"></span>
+                                                <p>Flowers</p>
+								                </div>
+							                </li><li>
+                                                <div class="feature-block">
+                                                <span> <img src="https://hotelhimalaya.com.np/images/features/kA1fw-air.png" width="70px" class="center"></span>
+                                                <p>Fresh Air</p>
+								                </div>
+							                </li><li>
+                                                <div class="feature-block">
+                                                <span> <img src="https://hotelhimalaya.com.np/images/features/hdiI0-plant.png" width="70px" class="center"></span>
+                                                <p>Greenery</p>
+								                </div>
+							                </li></ul>
+                                </div>
+                            </div>
+                        </div></div>
+<!-- ===============service area ===========================================-->
+
+<!--================Our Resort Gallery Area =================-->
+<section class="our_resort_gallery_area">
+    <div class="container">
+        <div class="explor_title row m0">
+            <div class="pull-left">
+                <div class="left_ex_title">
+                    <h2>Photo Gallery</h2>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container resort_gallery_inner imageGallery1">
+        <div class="resort_gallery owl-carousel"><div class="item">
+									<img src="https://hotelhimalaya.com.np/images/gallery/galleryimages/GIb0p-g5.jpg" alt="Entrance" class="img-responsive">
+									<div class="resort_g_hover">
+				                        <div class="resort_hover_inner">
+				                            <a class="light" href="https://hotelhimalaya.com.np/images/gallery/galleryimages/GIb0p-g5.jpg"><i class="fa fa-expand" aria-hidden="true"></i></a> 
+				                            <h5>Entrance</h5>
+				                        </div>
+				                    </div>
+				                </div><div class="item">
+									<img src="https://hotelhimalaya.com.np/images/gallery/galleryimages/pQiUJ-g6.jpg" alt="Entrance" class="img-responsive">
+									<div class="resort_g_hover">
+				                        <div class="resort_hover_inner">
+				                            <a class="light" href="https://hotelhimalaya.com.np/images/gallery/galleryimages/pQiUJ-g6.jpg"><i class="fa fa-expand" aria-hidden="true"></i></a> 
+				                            <h5>Entrance</h5>
+				                        </div>
+				                    </div>
+				                </div><div class="item">
+									<img src="https://hotelhimalaya.com.np/images/gallery/galleryimages/GfcTg-g3.jpg" alt="Café Horizon" class="img-responsive">
+									<div class="resort_g_hover">
+				                        <div class="resort_hover_inner">
+				                            <a class="light" href="https://hotelhimalaya.com.np/images/gallery/galleryimages/GfcTg-g3.jpg"><i class="fa fa-expand" aria-hidden="true"></i></a> 
+				                            <h5>Café Horizon</h5>
+				                        </div>
+				                    </div>
+				                </div><div class="item">
+									<img src="https://hotelhimalaya.com.np/images/gallery/galleryimages/Y7KBM-g1.jpg" alt="View" class="img-responsive">
+									<div class="resort_g_hover">
+				                        <div class="resort_hover_inner">
+				                            <a class="light" href="https://hotelhimalaya.com.np/images/gallery/galleryimages/Y7KBM-g1.jpg"><i class="fa fa-expand" aria-hidden="true"></i></a> 
+				                            <h5>View</h5>
+				                        </div>
+				                    </div>
+				                </div><div class="item">
+									<img src="https://hotelhimalaya.com.np/images/gallery/galleryimages/uy8qu-g7.jpg" alt="Decorations at Palm Garden" class="img-responsive">
+									<div class="resort_g_hover">
+				                        <div class="resort_hover_inner">
+				                            <a class="light" href="https://hotelhimalaya.com.np/images/gallery/galleryimages/uy8qu-g7.jpg"><i class="fa fa-expand" aria-hidden="true"></i></a> 
+				                            <h5>Decorations at Palm Garden</h5>
+				                        </div>
+				                    </div>
+				                </div><div class="item">
+									<img src="https://hotelhimalaya.com.np/images/gallery/galleryimages/56fsF-g8.jpg" alt="Palm Garden" class="img-responsive">
+									<div class="resort_g_hover">
+				                        <div class="resort_hover_inner">
+				                            <a class="light" href="https://hotelhimalaya.com.np/images/gallery/galleryimages/56fsF-g8.jpg"><i class="fa fa-expand" aria-hidden="true"></i></a> 
+				                            <h5>Palm Garden</h5>
+				                        </div>
+				                    </div>
+				                </div><div class="item">
+									<img src="https://hotelhimalaya.com.np/images/gallery/galleryimages/ejN3o-suite.jpg" alt="Suite Room" class="img-responsive">
+									<div class="resort_g_hover">
+				                        <div class="resort_hover_inner">
+				                            <a class="light" href="https://hotelhimalaya.com.np/images/gallery/galleryimages/ejN3o-suite.jpg"><i class="fa fa-expand" aria-hidden="true"></i></a> 
+				                            <h5>Suite Room</h5>
+				                        </div>
+				                    </div>
+				                </div><div class="item">
+									<img src="https://hotelhimalaya.com.np/images/gallery/galleryimages/zLxpQ-hotelhimalaya.jpg" alt="Deluxe Room" class="img-responsive">
+									<div class="resort_g_hover">
+				                        <div class="resort_hover_inner">
+				                            <a class="light" href="https://hotelhimalaya.com.np/images/gallery/galleryimages/zLxpQ-hotelhimalaya.jpg"><i class="fa fa-expand" aria-hidden="true"></i></a> 
+				                            <h5>Deluxe Room</h5>
+				                        </div>
+				                    </div>
+				                </div><div class="item">
+									<img src="https://hotelhimalaya.com.np/images/gallery/galleryimages/FfNX0-ameniies.jpg" alt="Junior Suite Desk" class="img-responsive">
+									<div class="resort_g_hover">
+				                        <div class="resort_hover_inner">
+				                            <a class="light" href="https://hotelhimalaya.com.np/images/gallery/galleryimages/FfNX0-ameniies.jpg"><i class="fa fa-expand" aria-hidden="true"></i></a> 
+				                            <h5>Junior Suite Desk</h5>
+				                        </div>
+				                    </div>
+				                </div><div class="item">
+									<img src="https://hotelhimalaya.com.np/images/gallery/galleryimages/5XP6o-tennis-court.jpg" alt="Tennis Court" class="img-responsive">
+									<div class="resort_g_hover">
+				                        <div class="resort_hover_inner">
+				                            <a class="light" href="https://hotelhimalaya.com.np/images/gallery/galleryimages/5XP6o-tennis-court.jpg"><i class="fa fa-expand" aria-hidden="true"></i></a> 
+				                            <h5>Tennis Court</h5>
+				                        </div>
+				                    </div>
+				                </div><div class="item">
+									<img src="https://hotelhimalaya.com.np/images/gallery/galleryimages/j9FFF-ggndc-suite.jpg" alt="Executive Room " class="img-responsive">
+									<div class="resort_g_hover">
+				                        <div class="resort_hover_inner">
+				                            <a class="light" href="https://hotelhimalaya.com.np/images/gallery/galleryimages/j9FFF-ggndc-suite.jpg"><i class="fa fa-expand" aria-hidden="true"></i></a> 
+				                            <h5>Executive Room </h5>
+				                        </div>
+				                    </div>
+				                </div><div class="item">
+									<img src="https://hotelhimalaya.com.np/images/gallery/galleryimages/5L1vq-health.jpg" alt="Health Club" class="img-responsive">
+									<div class="resort_g_hover">
+				                        <div class="resort_hover_inner">
+				                            <a class="light" href="https://hotelhimalaya.com.np/images/gallery/galleryimages/5L1vq-health.jpg"><i class="fa fa-expand" aria-hidden="true"></i></a> 
+				                            <h5>Health Club</h5>
+				                        </div>
+				                    </div>
+				                </div><div class="item">
+									<img src="https://hotelhimalaya.com.np/images/gallery/galleryimages/PUNiC-lounge4.jpg" alt="By The Waterfall Lounge" class="img-responsive">
+									<div class="resort_g_hover">
+				                        <div class="resort_hover_inner">
+				                            <a class="light" href="https://hotelhimalaya.com.np/images/gallery/galleryimages/PUNiC-lounge4.jpg"><i class="fa fa-expand" aria-hidden="true"></i></a> 
+				                            <h5>By The Waterfall Lounge</h5>
+				                        </div>
+				                    </div>
+				                </div></div>
+		</div>
+    </div>
+</section>
+
+
+<section class="latest_news_area">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-9">
+                <div class="right_event">
+                    <div class="left_ex_title">
+                        <h2 class="col-md-">
+                            Customer reviews
+                        </h2>
+
+                    </div>
+                    <div class="testimonials-wrapper">
+                <div class="clients_slider owl-carousel"><div class="item">
+                        <div class="test-cont">
+                            <p>
+	The location is excellent for tourist visits to Kathmandu. That is, it is relaxing place away from noise of Tourist locations but easy access to touring. Going out for tour days and returning in the afternoon to relax and refresh is better than stays in tourist places.
+</p>
+                        </div>
+                        <div class="test-bot">
+                            <div class="tst-img">
+                                <a href="https://www.booking.com/hotel/np/himalaya-kathmandu.en-gb.html?label=gen173nr-1DCAEoggI46AdIM1gEaKsBiAEBmAEJuAEGyAEM2AED6AEBiAIBqAIDuALuqobxBcACAQ;sid=93be6cf19bda45bc57614ae5eaff1ec6;dest_id=-1022136;dest_type=city;dist=0;group_adults=2;group_children=0;hapos=1;hpos=1;no_rooms=1;room1=A%2CA;sb_price_type=total;sr_order=popularity;srepoch=1579259281;srpvid=0a9e4e48670c0065;type=total;ucfs=1&#hotelTmpl" target="_blank">
+                                    <img src="https://hotelhimalaya.com.np/images/testimonial/Wpq5u-booking-logo.jpg" alt="Tim" class="img-responsive">
+                                </a>
+                            </div>
+                            <div class="client_name">
+                                 <h5>Tim - <span>USA</span></h5>
+                                  <ul>
+                                      <li><i class="fa fa-star"></i></li><li><i class="fa fa-star"></i></li><li><i class="fa fa-star"></i></li><li><i class="fa fa-star"></i></li><li><i class="fa fa-star"></i></li>
+                                  </ul>
+                            </div>
+                        </div>
+                    </div><div class="item">
+                        <div class="test-cont">
+                            <p>
+	A beautiful quaint hotel located a little bit away from the heart of Kathmandu. A little bit pricy compared to the other options nearby but is definitely worth it. The hotel has a nice pool and a lounge area as well. Perhaps the best thing about the hotel is the customer service. The staff were extremely polite, cordial and helpful during my visit.
+</p>
+                        </div>
+                        <div class="test-bot">
+                            <div class="tst-img">
+                                <a href="https://www.google.com/travel/hotels/entity/CgsIn-ff343l28OBARAB/reviews?g2lb=2502548%2C4208993%2C4254308%2C4258168%2C4260007%2C4270442%2C4274032%2C4291318%2C4305595%2C4306835%2C4308216%2C4308226%2C4308984%2C4314846%2C4315873%2C4317915%2C4326763%2C4328159%2C4329288%2C4330113%2C4338438%2C4348884%2C4270859%2C4284970%2C4291517%2C4292955%2C4316256&hl=en&gl=np&un=1&rp=EJ_n39-N5dvDgQE4AkAASAE&ictx=1&sa=X&ved=2ahUKEwi435LG077nAhXWMt4KHRZ3AYsQ4gkwDXoECBcQIA&hrf=IgNOUFIqFgoHCOQPEAIYCRIHCOQPEAIYChgBKACCASUweDM5ZWIxOWI2NjUyYjE1ZmQ6MHg4MTg3NmYyOGRiZjdmMzlmmgEnGiUweDM5ZWIxOWI2NjUyYjE1ZmQ6MHg4MTg3NmYyOGRiZjdmMzlm" target="_blank">
+                                    <img src="https://hotelhimalaya.com.np/images/testimonial/So4m6-google.jpg" alt="Siam Hussain" class="img-responsive">
+                                </a>
+                            </div>
+                            <div class="client_name">
+                                 <h5>Siam Hussain - <span></span></h5>
+                                  <ul>
+                                      <li><i class="fa fa-star"></i></li><li><i class="fa fa-star"></i></li><li><i class="fa fa-star"></i></li><li><i class="fa fa-star"></i></li>
+                                  </ul>
+                            </div>
+                        </div>
+                    </div><div class="item">
+                        <div class="test-cont">
+                            <p>
+	Me and my husband stayed 3 nights at Hotel Himalaya. Great location! Just 5 min walk to Patan Durban Square. The deluxe room was big with a super comfortable bed. Great laundry service available. Breakfast buffet was delicious. Dinner restaurant was great!!! Service was 100 points. The only &ldquo;bad&rdquo; think was that the wifi was only available at the lobby, not in the room.
+</p>
+                        </div>
+                        <div class="test-bot">
+                            <div class="tst-img">
+                                <a href="https://www.tripadvisor.com/Hotel_Review-g315764-d316826-Reviews-or5-Hotel_Himalaya-Patan_Lalitpur_Kathmandu_Valley_Bagmati_Zone_Central_Region.html#REVIEWS" target="_blank">
+                                    <img src="https://hotelhimalaya.com.np/images/testimonial/iA0mQ-tripadvisor-logo.jpg" alt="Karla B" class="img-responsive">
+                                </a>
+                            </div>
+                            <div class="client_name">
+                                 <h5>Karla B - <span>Florida, USA</span></h5>
+                                  <ul>
+                                      <li><i class="fa fa-star"></i></li><li><i class="fa fa-star"></i></li><li><i class="fa fa-star"></i></li><li><i class="fa fa-star"></i></li><li><i class="fa fa-star"></i></li>
+                                  </ul>
+                            </div>
+                        </div>
+                    </div><div class="item">
+                        <div class="test-cont">
+                            <p>
+	Himalaya Hotel is my most favoured place to stay when I arrive at Kathmandu for various reasons. First, it&#39;s one of the cleanest property around, with great ambience - including clean rooms, toilets and swimming pool. Secondly, the staff is extremely polite and helpful. They are always so homecoming and supportive. They will talk to you and connect on a personal level - be it the security staff at gate or restaurant staff or reception. Food is excellent, the breakfast has a lot of varieties.
+</p>
+                        </div>
+                        <div class="test-bot">
+                            <div class="tst-img">
+                                <a href="https://www.expedia.com/Lalitpur-Hotels-Hotel-Himalaya.h4132544.Hotel-Information?pwaDialog=reviews" target="_blank">
+                                    <img src="https://hotelhimalaya.com.np/images/testimonial/56nOs-expedia-logo.jpg" alt="Yogesh" class="img-responsive">
+                                </a>
+                            </div>
+                            <div class="client_name">
+                                 <h5>Yogesh - <span></span></h5>
+                                  <ul>
+                                      <li><i class="fa fa-star"></i></li><li><i class="fa fa-star"></i></li><li><i class="fa fa-star"></i></li><li><i class="fa fa-star"></i></li><li><i class="fa fa-star"></i></li>
+                                  </ul>
+                            </div>
+                        </div>
+                    </div></div>
+    </div>
+                  
+                </div>
+            </div>
+         
+        </div>
+    </div>
+</section>
+
+<footer>
+    <div class="bg-footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-5 col-xs-12">
+                    <div class="contact">
+                       
+
+            </div>
+            <div class="col-sm-7 col-xs-12">
+                    <div class="news">
+                        <div class="subscribe">
+                                <iframe class="weather-forcast" src="https://weatherfor.us/widget?location=kathmandu++nepal&unit=metric" width="500" height="500" scrolling="no" frameborder="0" allowtransparency="true" ></iframe>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="footerlinks">
+            <div class="container" style="color:purple">Developed by <a href="https://personal-portfolio-eosin-nu.vercel.app/" target="_blank">Himal Neupane</a></span>
+		</div>
+           	</div>
+</footer>
+
+<script src="https://hotelhimalaya.com.np/template/web/assets/js/jquery-2.2.4.js"></script>
+<script src="https://hotelhimalaya.com.np/template/web/assets/js/bootstrap.min.js"></script>
+
+<script src="https://hotelhimalaya.com.np/template/web/assets/vendors/isotope/imagesloaded.pkgd.min.js"></script>
+
+<script src="https://hotelhimalaya.com.np/template/web/assets/vendors/lightbox/simpleLightbox.min.js"></script>
+
+<!-- Owl Carousel -->
+<script src="https://hotelhimalaya.com.np/template/web/assets/js/owl.carousel.min.js"></script>
+
+
+<script>
+    jQuery(function ($) {
+
+        $('.splashbg').toggleClass('hidden');
+        if ($(window).width() > $(window).height()) {
+            $('.cstm_modal').css({height: '700px'});
+            $('.cstm_modal img').css({height: '100%'});
+
+        } else {
+            $('.cstm_modal').width($(window).width() - 15);
+            $('.cstm_modal img').css({width: '100%'});
+        }
+
+        $('.closepop').on('click', function () {
+            $('.splashbg').remove();
+        })
+        $('.splashbg').on('click', function () {
+            $('.splashbg').remove();
+        })
+    });
+</script>
+
+<!-- dynamic popup -->
+
+<script type="text/javascript">
+    $(document).ready(function () {
+        $("#modal-popup-video").modal('show');
+        $('#modal-popup-video').on('hidden.bs.modal', function () {
+            $("#modal-popup-image").modal('show');
+            console.log("video closed")
+            $("#modal-popup-video iframe").attr("src", "");
+        });
+        $('#modal-popup-image').on('hidden.bs.modal', function () {
+            // $('.deals ,.D-prev ,.D-next').removeClass('d-none');
+        });
+        if ($('#modal-popup-video')[0]) {
+            $("#modal-popup-image").modal('hide');
+        } else {
+            $("#modal-popup-image").modal('show');
+        }
+        jQuery('.deals .close').on('click', function () {
+            jQuery('.deals ').addClass('d-none');
+        });
+        $('#offon').on('click', function () {
+            $('.deals ').toggleClass('d-none');
+        });
+    });
+</script>
+
+
+<script src="https://hotelhimalaya.com.np/template/web/assets/js/theme.js"></script>
+<script src="https://hotelhimalaya.com.np/template/web/assets/js/custom.js"></script>
+
+{% endblock content %}

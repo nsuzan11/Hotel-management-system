@@ -1,3 +1,4 @@
+from tabnanny import verbose
 from django.db import models
 from django.core.exceptions import ValidationError
 from django.contrib.auth.models import User
@@ -5,18 +6,6 @@ import datetime
 from django.dispatch import receiver
 from django.db.models.signals import pre_delete
 
-# class User():
-#     first_name = models.CharField(max_length=10)
-#     last_name = models.CharField(max_length=10)
-#     email = models.EmailField(max_length=15)
-#     password = models.CharField(max_length=20)
-
-
-# class Admin(models.Model):
-#     first_name = models.CharField(max_length=10)
-#     last_name = models.CharField(max_length=10)
-#     email = models.EmailField(max_length=15)
-#     password = models.CharField(max_length=20)
 
 class Hotel(models.Model):
     hotel_name = models.CharField(max_length=15)
@@ -32,7 +21,7 @@ class Hotel(models.Model):
 @receiver(pre_delete, sender=Hotel)
 def my_callback(sender, **kwargs):
     raise ValidationError("cannot delete")
-    print("You cannot delete this!")
+    
 
     
 class Bill(models.Model):
@@ -41,13 +30,23 @@ class Bill(models.Model):
     room_price = models.ForeignKey('hotel.Room',on_delete = models.PROTECT)
     user_name = models.ForeignKey(User,on_delete = models.PROTECT)
     
-    
     def __str__(self) -> str:
         return self.pk.__str__()
 
 
+class Menu(models.Model):
+    class Meta:
+        verbose_name_plural = 'Menu'
+    name = models.CharField(max_length=15,null=False,unique=True)
+    price = models.PositiveSmallIntegerField(blank=False,null=False)
+
+    def __str__(self) -> str:
+        return self.name
+
+
+
 class Room(models.Model):
-    room_type = models.CharField(max_length=15,null=False,blank=False,unique=True)
+    room_type = models.CharField(max_length=30,null=False,blank=False,unique=True)
     room_price = models.PositiveIntegerField(blank=False,null=False)
     quantity = models.PositiveSmallIntegerField(blank=False,null=False)
     description = models.TextField()
@@ -75,4 +74,5 @@ class Booking(models.Model):
             raise ValidationError("Start date is in the past")
         if end < datetime.date.today():
             raise ValidationError("End date is in the past")
+
 
