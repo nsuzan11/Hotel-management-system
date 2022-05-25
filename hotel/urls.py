@@ -7,10 +7,10 @@ from .views import index,aboutus,rooms,login,book,contactus
 app_name = 'hotel'
 urlpatterns = [
     path('', index),
-    path('hotel/aboutus', aboutus),
-    path('hotel/rooms', rooms),
-    path('hotel/book', book),
-    path('hotel/contactus', contactus),
-    path('hotel/login', login),
+    path('aboutus.html', aboutus),
+    path('rooms.html', rooms),
+    path('book.html', book),
+    path('contactus.html', contactus),
+    path('login.html', login),
 
 ]

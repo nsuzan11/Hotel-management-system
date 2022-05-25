@@ -3,14 +3,22 @@ from unittest import loader
 from django.http import HttpResponse
 from django.shortcuts import render
 from django.template import loader
-
+from django.views.generic import TemplateView
 # Create your views here.
 
-def index(request):
-    print("hello")
-    return render(request,'index.html')
+# def index(request):
+#     print("hello")
+#     return render(request, 'index.html')
 
+# class index(TemplateView):
+#     template_name = " "
+
+def index(request):
+    print("aboutus")
+    return render(request, 'index.html')
+    
 def aboutus(request):
+    print("aboutus")
     return render(request, 'aboutus.html')
 
 def rooms(request):
