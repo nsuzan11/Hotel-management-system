@@ -14,12 +14,12 @@ from django.views.generic import TemplateView
 #     template_name = " "
 
 def index(request):
-    print("aboutus")
+    print("hello")
     return render(request, 'index.html')
     
-def aboutus(request):
-    print("aboutus")
-    return render(request, 'aboutus.html')
+# def aboutus(request):
+#     print("aboutus")
+#     return render(request, 'aboutus.html')
 
 def rooms(request):
     return render(request, 'rooms.html')
@@ -32,6 +32,3 @@ def contactus(request):
     
 def login(request):
     return render(request, 'login.html')
-    # template = loader.get_template('myfirst.html')
-    # return HttpResponse("Hello world!!")
-    #return HttpResponse(template.render())

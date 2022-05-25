@@ -8,6 +8,8 @@ from django.db.models.signals import pre_delete
 
 
 class Hotel(models.Model):
+    class Meta:
+        verbose_name_plural = 'Hotel'
     hotel_name = models.CharField(max_length=15)
     opening_hour = models.CharField(max_length=15)
     closing_hour = models.CharField(max_length=15)
@@ -37,7 +39,7 @@ class Bill(models.Model):
 class Menu(models.Model):
     class Meta:
         verbose_name_plural = 'Menu'
-    name = models.CharField(max_length=15,null=False,unique=True)
+    name = models.CharField(max_length=25,null=False,unique=True)
     price = models.PositiveSmallIntegerField(blank=False,null=False)
 
     def __str__(self) -> str:
