@@ -5,6 +5,16 @@ from django.contrib.auth.models import User
 import datetime 
 from django.dispatch import receiver
 from django.db.models.signals import pre_delete
+from django.contrib.auth.models import AbstractUser
+
+# class Consumer(AbstractUser):
+#     is_admin = models.BooleanField(default=False)
+#     is_guest = models.BooleanField(default=False)
+
+
+# class Guest():
+#     user = models.OneToOneField(Consumer, on_delete=models.CASCADE, primary_key=True)
+#     phone_number = models.CharField( max_length=10 )
 
 
 class Hotel(models.Model):

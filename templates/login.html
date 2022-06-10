@@ -1,4 +1,5 @@
-<!DOCTYPE html>
+{% extends "base.html" %}
+{% block content %}<!DOCTYPE html>
 <html lang="en">
 <head>
     <title>Login or Sign Up</title>
@@ -56,7 +57,7 @@ body{
     bottom: -80px;
 }
 form{
-    height: 520px;
+    height: 590px;
     width: 400px;
     background-color: rgba(255,255,255,0.13);
     position: absolute;
@@ -181,19 +182,11 @@ button{
                 <img class="google-icon" src="https://upload.wikimedia.org/wikipedia/commons/5/53/Google_%22G%22_Logo.svg"/>
             </div>
             <form>
-            <input type="button" onclick="window.location.href='https://accounts.google.com/signin/v2/identifier?service=mail&passive=1209600&osid=1&continue=https%3A%2F%2Fmail.google.com%2Fmail%2Fu%2F0%2F&followup=https%3A%2F%2Fmail.google.com%2Fmail%2Fu%2F0%2F&emr=1&flowName=GlifWebSignIn&flowEntry=ServiceLogin';" value="Sign in with google"/>
+            <input type="button" onclick="window.location.href='https://accounts.google.com/signin/v2/identifier?service=mail&passive=1209600&osid=1&continue=https%3A%2F%2Fmail.google.com%2Fmail%2Fu%2F0%2F&followup=https%3A%2F%2Fmail.google.com%2Fmail%2Fu%2F0%2F&emr=1&flowName=GlifWebSignIn&flowEntry=ServiceLogin'" value="Sign up";/>
             </form>
             {% comment %} <p class="btn-text" ><b>Sign in with google</b></p> {% endcomment %}
         </div>
-        {% comment %} <div class="social">
-            <div class="go">
-             
-                <input type="button" onclick="window.location.href='https://accounts.google.com/signin/v2/identifier?service=mail&passive=1209600&osid=1&continue=https%3A%2F%2Fmail.google.com%2Fmail%2Fu%2F0%2F&followup=https%3A%2F%2Fmail.google.com%2Fmail%2Fu%2F0%2F&emr=1&flowName=GlifWebSignIn&flowEntry=ServiceLogin';" value="Google"/>
-                <i class="fab fa-google"></i> 
-            </div>
-          <div class="fb"><i class="fab fa-facebook"></i>  Facebook
-          </div>
-        </div> {% endcomment %}
     </form>
 </body>
 </html>
+{% endblock content %}
