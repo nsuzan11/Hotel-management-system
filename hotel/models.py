@@ -1,4 +1,5 @@
 from tabnanny import verbose
+from unittest.util import _MIN_END_LEN
 from django.db import models
 from django.core.exceptions import ValidationError
 from django.contrib.auth.models import User
@@ -6,7 +7,7 @@ import datetime
 from django.dispatch import receiver
 from django.db.models.signals import pre_delete
 from django.contrib.auth.models import AbstractUser
-
+from django.core.validators import MinValueValidator
 # class Consumer(AbstractUser):
 #     is_admin = models.BooleanField(default=False)
 #     is_guest = models.BooleanField(default=False)
@@ -73,6 +74,9 @@ class Booking(models.Model):
     booking_date = models.DateField(auto_now_add=True)
     start_day = models.DateField(verbose_name="start date AD")
     end_day = models.DateField(verbose_name="end date AD")
+    no_people = models.PositiveSmallIntegerField(default=1, validators=[MinValueValidator(1)])
+    email = models.EmailField(blank=True, null=True)
+    phone_number = models.CharField(max_length=10, validators=[MinValueValidator(10)], null=True) 
     
     def __str__(self) -> str:
         return self.room_type.room_type 
