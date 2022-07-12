@@ -19,6 +19,7 @@ urlpatterns = [
     path('rooms/', rooms),
     path('book/', book),
     path('contactus/', contactus),
+    path('menu/', menu_hotel ),
     # path('book-now',booknow ),
 
 ]

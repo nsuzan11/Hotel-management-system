@@ -8,15 +8,6 @@ from django.dispatch import receiver
 from django.db.models.signals import pre_delete
 from django.contrib.auth.models import AbstractUser
 from django.core.validators import MinValueValidator
-# class Consumer(AbstractUser):
-#     is_admin = models.BooleanField(default=False)
-#     is_guest = models.BooleanField(default=False)
-
-
-# class Guest():
-#     user = models.OneToOneField(Consumer, on_delete=models.CASCADE, primary_key=True)
-#     phone_number = models.CharField( max_length=10 )
-
 
 class Hotel(models.Model):
     class Meta:
@@ -50,13 +41,11 @@ class Bill(models.Model):
 class Menu(models.Model):
     class Meta:
         verbose_name_plural = 'Menu'
-    name = models.CharField(max_length=25,null=False,unique=True)
-    price = models.PositiveSmallIntegerField(blank=False,null=False)
-
+    food_menu = models.CharField(max_length=30)
+    bar_menu = models.CharField(max_length=30)
+    
     def __str__(self) -> str:
         return self.name
-
-
 
 class Room(models.Model):
     room_type = models.CharField(max_length=30,null=False,blank=False,unique=True)
@@ -91,4 +80,5 @@ class Booking(models.Model):
         if end < datetime.date.today():
             raise ValidationError("End date is in the past")
 
-
+# class TotalBooking:
+#     all_booking = 

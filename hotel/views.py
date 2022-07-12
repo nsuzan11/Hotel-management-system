@@ -18,7 +18,6 @@ def index(request):
     print("hello")
     return render(request, 'index.html')
 
-@login_required(login_url='/login/')
 def rooms(request):
     return render(request, 'rooms.html')
 
@@ -51,23 +50,9 @@ def contactus(request):
 def loginP(request):
     return render(request, 'login.html')
 
-# def booknow(request):
-#     if(request.method == "POST"):
-#         form = BookForm(request.POST)
-#         if(form.is_valid()):
-#             fullname = form.cleaned_data['fullname']
-#             checkin = form.cleaned_data['checkin']
-#             checkout = form.cleaned_data['checkout']
-#             roomtype = form.cleaned_data['roomtype']
-#             nopeople = form.cleaned_data['nopeople']
-#             email = form.cleaned_data['email']
-#             phone_number = form.cleaned_data['phone_number']
-#             instance = Booking(
-#                 room_type=roomtype,
-#                 user_info = fullname,
-                
-#             )
-
+def menu_hotel(request):
+    return render(request, 'menu.html')
+    
 def registerPage(request):
     form = CreateUserForm()
 
@@ -78,7 +63,7 @@ def registerPage(request):
             user = form.cleaned_data.get('username')
             messages.success(request,'Account created for '+ user)
 
-            return redirect('/login')
+            return redirect('login')
 
     context = {'form':form}
     return render(request, 'register.html', context)
@@ -102,4 +87,4 @@ def loginPage(request):
 
 def logoutUser(request):
     logout(request)
-    return redirect('/login')
+    return redirect('/login/')
