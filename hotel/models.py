@@ -31,8 +31,8 @@ def my_callback(sender, **kwargs):
 class Bill(models.Model):
     class Meta:
         verbose_name_plural = 'Bill'
-    room_price = models.ForeignKey('hotel.Room',on_delete = models.PROTECT)
-    user_name = models.ForeignKey(User,on_delete = models.PROTECT)
+    username = models.ForeignKey(User,on_delete = models.CASCADE)
+    room = models.ForeignKey("hotel.Room", on_delete=models.CASCADE)
     
     def __str__(self) -> str:
         return self.pk.__str__()

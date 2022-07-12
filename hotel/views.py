@@ -4,7 +4,7 @@ from re import template
 from django.shortcuts import redirect, render
 from idna import check_initial_combiner
 from requests import request
-from .models import Booking,Room
+from .models import Bill, Booking,Room
 from .forms import CreateUserForm
 from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth import authenticate, login, logout
@@ -40,7 +40,14 @@ def book(request):
             email = email,
             no_people = no_people
             )
+        bill_instance = Bill(
+            username= request.user,
+            room = Room.objects.filter(room_type = room_type)[0]
+        )
         instance.save()
+        bill_instance.save()
+
+        return render(request, template_name="bill.html", context={'bill': bill_instance})
 
     return render(request, 'book.html')
 
