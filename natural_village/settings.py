@@ -40,7 +40,8 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'hotel',
-    'embed_video'
+    'embed_video',
+    'mathfilters'
 ]
 
 MIDDLEWARE = [

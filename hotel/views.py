@@ -5,11 +5,12 @@ from django.shortcuts import redirect, render
 from idna import check_initial_combiner
 from requests import request
 from .models import Bill, Booking,Room
-from .forms import CreateUserForm
+from .forms import BookingForm, CreateUserForm
 from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth import authenticate, login, logout
 from django.contrib import messages
 from django.contrib.auth.decorators import login_required
+from django.views.generic import View
 
 # Create your views here.
 
@@ -18,11 +19,15 @@ def index(request):
     print("hello")
     return render(request, 'index.html')
 
+def paypal(request, price):
+    return render(request, 'paypal.html',{'price':price})
+
 def rooms(request):
     return render(request, 'rooms.html')
 
 @login_required(login_url='/login/')
 def book(request):
+    booking_form = BookingForm()
     if(request.method == "POST"):
         check_in = request.POST.get('checkin')
         check_out = request.POST.get('checkout')
@@ -44,10 +49,12 @@ def book(request):
             username= request.user,
             room = Room.objects.filter(room_type = room_type)[0]
         )
-        instance.save()
-        bill_instance.save()
-
-        return render(request, template_name="bill.html", context={'bill': bill_instance})
+        BookForm = BookingForm(request.POST, instance= instance)
+        print(BookForm)
+        if BookForm.is_valid():
+            b = BookForm.save()
+            b.save()
+            return render(request, template_name="bill.html", context={'bill': bill_instance})
 
     return render(request, 'book.html')
 
@@ -70,7 +77,7 @@ def registerPage(request):
             user = form.cleaned_data.get('username')
             messages.success(request,'Account created for '+ user)
 
-            return redirect('login')
+            return redirect('/')
 
     context = {'form':form}
     return render(request, 'register.html', context)
@@ -95,3 +102,27 @@ def loginPage(request):
 def logoutUser(request):
     logout(request)
     return redirect('/login/')
+
+@login_required(login_url='/login/')
+def booking_create(request):
+    user = request.user
+    form = BookingForm()
+    if request.method == "POST":
+        form = BookingForm(request.POST)
+        print(form)
+        if form.is_valid():
+            form = form.save(commit=False)
+            form.user_info = user
+            form.save()
+            bill_instance = Bill(
+            username= request.user,
+            room = Room.objects.filter(room_type = form.room_type)[0]
+        )
+            bill_instance.save()
+            return render(request, template_name="bill.html", context={'bill': bill_instance})
+            
+    context = {
+        "form": form
+    }
+    return render(request, "book.html", context)
+

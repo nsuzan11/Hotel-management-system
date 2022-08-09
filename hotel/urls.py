@@ -17,9 +17,10 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('accounts/', include('django.contrib.auth.urls')),
     path('rooms/', rooms),
-    path('book/', book),
+    path('book/', booking_create),
     path('contactus/', contactus),
     path('menu/', menu_hotel ),
+    path('paypal/<int:price>/', paypal),
     # path('book-now',booknow ),
 
 ]

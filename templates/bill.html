@@ -1,3 +1,4 @@
+{% load mathfilters %}
 <style>
 /* reset */
 
@@ -147,24 +148,24 @@ tr:hover .cut { opacity: 1; }
 
 @page { margin: 0; }
 </style>
- 
 <header>
+	<h3><a href="/">Home</a></h3>
 			<h1>Invoice</h1>
 			<address contenteditable>
 				<p>Hotel Natural Village</p>
-				<p>101 E. Chapman Ave<br>Orange, CA 92866</p>
-				<p>(800) 555-1234</p>
+				<p>Nagarkot</p>
+				<p>+977-9843806272</p>
 			</address>
-			<span><img alt="" src="http://www.jonathantneal.com/examples/invoice/logo.png"><input type="file" accept="image/*"></span>
+			
 		</header>
 		<article>
 			<h1>Recipient</h1>
 			<address contenteditable>
-				<p>{{bill.username}}</p>
+				<p><span style="text-transform:uppercase">{{bill.username}}</span></p>
 			</address>
 			<table class="meta">
 				<tr>
-					<th><span contenteditable>Bill #</span></th>
+					<th><span contenteditable>Bill no #</span></th>
 					<td><span contenteditable>{{bill.id}}</span></td>
 				</tr>
 				{% comment %} <tr>
@@ -175,34 +176,41 @@ tr:hover .cut { opacity: 1; }
 			<table class="inventory">
 				<thead>
 					<tr>
-						<th><span contenteditable>Item</span></th>
-						<th><span contenteditable>Description</span></th>
-						<th><span contenteditable>Rate</span></th>
-						<th><span contenteditable>Quantity</span></th>
-						<th><span contenteditable>Price</span></th>
+						<th><span >Item</span></th>
+						<th><span>Rate</span></th>
+						<th><span>Quantity</span></th>
+						<th><span>Price</span></th>
 					</tr>
 				</thead>
 				<tbody>
 					<tr>
-						<td><a class="cut">-</a><span contenteditable>Front End Consultation</span></td>
-						<td><span contenteditable>Experience Review</span></td>
-						<td><span data-prefix>$</span><span contenteditable>150.00</span></td>
-						<td><span contenteditable>4</span></td>
-						<td><span data-prefix>$</span><span>600.00</span></td>
+						<td><span>{{bill.room.room_type}}</span></td>
+						<td><span data-prefix>Rs.</span><span >{{bill.room.room_price}}</span></td>
+						<td><span>1</span></td>
+						<td><span data-prefix>Rs.</span><span>{{bill.room.room_price}}</span></td>
 					</tr>
 				</tbody>
 			</table>
-			<a class="add">+</a>
+			
 			<table class="balance">
 				<tr>
-					<th><span contenteditable>Total</span></th>
-					<td><span data-prefix>Rs.</span><span>{{bill.room.room_price}}</span></td>
+					<th><span >Total</span></th>
+					<td><span data-prefix>Rs.</span><span>{{bill.room.room_price|mul:0.25|add:bill.room.room_price}}</span></td>
 				</tr>
 			</table>
 		</article>
 		<aside>
-			<h1><span contenteditable>Additional Notes</span></h1>
-			<div contenteditable>
-				<p>A finance charge of 1.5% will be made on unpaid balances after 30 days.</p>
+			<h1><span>Additional Notes</span></h1>
+			<div>
+				<p>Service charge 13% and VAT charge are inclusive</p>
 			</div>
 		</aside>
+		<p style="margin-top:2em; margin-bottom:1em">Pay using Mobile Banking</p>
+		<!-- {% load static %}<img src="{% static "/templates/pictures/QR.jpg" %}" alt="QR" /> -->
+		<img src="https://www.sanimabank.com/assets/frontend/img/qr-sanima.jpg">
+		<br><br>
+		<a href="../paypal/{{bill.room.room_price|mul:0.25|add:bill.room.room_price}}/" style="color: blue;">Pay using paypal</div>
+		
+		</div>
+	
+	
